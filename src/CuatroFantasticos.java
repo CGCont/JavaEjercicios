@@ -26,13 +26,15 @@ public class CuatroFantasticos extends BaseAppGUI {
 
         private class StretchButton extends InternalButton{
                 public void pushAction(){
-                        walkAction();
+                        
                 }
         }
 
+        private boolean visibleFlag = true;
         private class VisibleButton extends InternalButton{
                 public void pushAction(){
-                        flyAction();
+                        space2.setVisible(visibleFlag);
+                        visibleFlag = !visibleFlag;
                 }
         }
 
