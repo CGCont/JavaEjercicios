@@ -90,7 +90,7 @@ public class CuatroFantasticos extends BaseAppGUI {
                 gridPanel.add(space);
                 gridPanel.add(space2);
 
-                frameGUI.setTitle("Superman VS Hulk  !!!");
+                frameGUI.setTitle("Fantastic Four!!!");
                 frameGUI.setSize(spaceWidth, spaceHeight);
                 frameGUI.setResizable(false);
                 frameGUI.addNorth(controlPanel);
@@ -114,7 +114,7 @@ public class CuatroFantasticos extends BaseAppGUI {
         }
 
         public static void main(String [] args){
-                SupermanVsHulkApp theTest = new SupermanVsHulkApp();
+                CuatroFantasticos theTest = new CuatroFantasticos();
                 theTest.startApplication();
         }
 
