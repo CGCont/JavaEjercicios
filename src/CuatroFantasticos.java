@@ -24,6 +24,18 @@ public class CuatroFantasticos extends BaseAppGUI {
                 }
         }
 
+        private class StretchButton extends InternalButton{
+                public void pushAction(){
+                        walkAction();
+                }
+        }
+
+        private class VisibleButton extends InternalButton{
+                public void pushAction(){
+                        flyAction();
+                }
+        }
+
         private class MouseStretch extends MouseAdapter {
                 public void mousePressed(MouseEvent e){
                               superHero2.stretch(space2, e.getX(), e.getY() );
@@ -42,9 +54,13 @@ public class CuatroFantasticos extends BaseAppGUI {
         private ElasticHuman	superHero4;
         private ImagePanel     	space4;
 
-        private FlowPanel       	controlPanel;
-        private WalkButton      	walkButton;
+        private FlowPanel       controlPanel;
+        private WalkButton      walkButton;
         private FlyButton      	flyButton;
+        private StretchButton      stretchButton;
+        private VisibleButton      visibleButton;
+
+
         private int	      	spaceWidth;
         private int		spaceHeight;
 
@@ -70,8 +86,12 @@ public class CuatroFantasticos extends BaseAppGUI {
                 space4		= new ImagePanel();
 
                 controlPanel	= new FlowPanel();
+
                 walkButton	= new WalkButton();
                 flyButton	= new FlyButton();
+
+                stretchButton	= new StretchButton();
+                visibleButton = new VisibleButton();
 
                 spaceWidth	= 600;
                 spaceHeight	= 600;
@@ -104,10 +124,14 @@ public class CuatroFantasticos extends BaseAppGUI {
 
                 walkButton.setLabel("Walk");
                 flyButton.setLabel("Fly");
+                stretchButton.setLabel("Stretch");
+                visibleButton.setLabel("Visible");
 
-                controlPanel.add(walkButton);
+                controlPanel.add(stretchButton);
+                controlPanel.add(visibleButton);
                 controlPanel.add(flyButton);
-
+                controlPanel.add(walkButton);
+                
                 gridPanel.add(space);
                 gridPanel.add(space2);
                 gridPanel.add(space3);
@@ -135,6 +159,8 @@ public class CuatroFantasticos extends BaseAppGUI {
         public void flyAction(){
                 superHero.fly(space, spaceWidth/2, spaceHeight);  
         }
+
+        
 
         public static void main(String [] args){
                 CuatroFantasticos theTest = new CuatroFantasticos();
