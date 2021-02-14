@@ -26,7 +26,7 @@ public class CuatroFantasticos extends BaseAppGUI {
 
         private class StretchButton extends InternalButton{
                 public void pushAction(){
-                        
+                        superHero.stretch(space, 200, 250);
                 }
         }
 
@@ -40,11 +40,11 @@ public class CuatroFantasticos extends BaseAppGUI {
 
         private class MouseStretch extends MouseAdapter {
                 public void mousePressed(MouseEvent e){
-                              superHero2.stretch(space2, e.getX(), e.getY() );
+                              superHero.stretch(space, e.getX(), e.getY() );
                 }
         }
 
-        private Superman	superHero;
+        private ElasticHuman	superHero;
         private ImagePanel     	space;
 
         private ElasticHuman	superHero2;
@@ -75,7 +75,7 @@ public class CuatroFantasticos extends BaseAppGUI {
 
                 super.createComponents();
 
-                superHero 	= new Superman();
+                superHero 	= new ElasticHuman();
                 space		= new ImagePanel();
 
                 superHero2 	= new ElasticHuman();
@@ -108,11 +108,11 @@ public class CuatroFantasticos extends BaseAppGUI {
 
                 space.imageX	= 0;
                 space.imageY	= 0;
+                space.addMouseListener(new MouseStretch());
                 space.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Reed Richards.jpg", 200,250);
               
                 space2.imageX	= 0;
                 space2.imageY	= 0;
-                space2.addMouseListener(new MouseStretch());
                 space2.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Sue Storm.jpg", 200,250);
 
                 space3.imageX	= 0;
@@ -121,7 +121,6 @@ public class CuatroFantasticos extends BaseAppGUI {
               
                 space4.imageX	= 0;
                 space4.imageY	= 0;
-                space4.addMouseListener(new MouseStretch());
                 space4.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Ben Grimm.jpg", 200,250);
 
                 walkButton.setLabel("<Walk<");
@@ -158,7 +157,7 @@ public class CuatroFantasticos extends BaseAppGUI {
         }
 
         public void flyAction(){
-                superHero3.fly(space, spaceWidth/2, spaceHeight);  
+                superHero3.fly(space3, spaceWidth/2, spaceHeight);  
         }
 
         
