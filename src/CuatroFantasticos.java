@@ -72,14 +72,14 @@ public class CuatroFantasticos extends BaseAppGUI {
 
         public void distributeComponents(){
 
-                space.imageX	= 100;
-                space.imageY	= 100;
-                space.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Reed Richards.jpg", 70,95);
+                space.imageX	= 0;
+                space.imageY	= 0;
+                space.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Reed Richards.jpg", 200,250);
               
                 space2.imageX	= 0;
                 space2.imageY	= 0;
                 space2.addMouseListener(new MouseStretch());
-                space2.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Sue Storm.jpg", 70,95);
+                space2.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Sue Storm.jpg", 200,250);
 
                 walkButton.setLabel("Walk");
                 flyButton.setLabel("Fly");
