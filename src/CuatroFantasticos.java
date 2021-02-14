@@ -74,12 +74,12 @@ public class CuatroFantasticos extends BaseAppGUI {
 
                 space.imageX	= 100;
                 space.imageY	= 100;
-                space.setImage("C:/oops/resources/images/supers/Superman/superman4.jpg", 70,95);
+                space.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Reed Richards.jpg", 70,95);
               
                 space2.imageX	= 0;
                 space2.imageY	= 0;
                 space2.addMouseListener(new MouseStretch());
-                space2.setImage("C:/oops/resources/images/supers/Marvel/Hulk.jpg", 70,95);
+                space2.setImage("D:/EjerciciosJava/src/resources/images/supers/Fantastic4/Ben Grimm.jpg", 70,95);
 
                 walkButton.setLabel("Walk");
                 flyButton.setLabel("Fly");
