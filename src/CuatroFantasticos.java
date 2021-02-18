@@ -147,21 +147,14 @@ public class CuatroFantasticos extends BaseAppGUI {
         }
 
         public void startApplication(){
-
                 frameGUI.setVisible(true);
-
         }
-
         public void walkAction(){
                superHero4.walk(space4, spaceWidth/2, spaceHeight);
         }
-
         public void flyAction(){
                 superHero3.fly(space3, spaceWidth/2, spaceHeight);  
         }
-
-        
-
         public static void main(String [] args){
                 CuatroFantasticos theTest = new CuatroFantasticos();
                 theTest.startApplication();

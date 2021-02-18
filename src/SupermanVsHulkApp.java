@@ -30,43 +30,45 @@ public class SupermanVsHulkApp extends BaseAppGUI {
                 }
         }
 
-        private Superman	superHero;
+        //private Superman	superHero;
         private ImagePanel     	space;
 
         private ElasticHuman	superHero2;
         private ImagePanel     	space2;
 
-        private FlowPanel       	controlPanel;
-        private WalkButton      	walkButton;
+        private FlowPanel       controlPanel;
+        private WalkButton      walkButton;
         private FlyButton      	flyButton;
         private int	      	spaceWidth;
         private int		spaceHeight;
 
-        private GridPanel       	gridPanel;
+        private GridPanel       gridPanel;
         private int	       	renglones;
         private int 	       	columnas;
 
+        private Superman superHero = new Superman();
 
         public void createComponents(){
 
                 super.createComponents();
 
-                superHero 		= new Superman();
+                
+                //superHero 	= new Superman();
                 space		= new ImagePanel();
 
-                superHero2 		= new ElasticHuman();
+                superHero2 	= new ElasticHuman();
                 space2		= new ImagePanel();
 
                 controlPanel	= new FlowPanel();
-                walkButton		= new WalkButton();
-                flyButton		= new FlyButton();
+                walkButton	= new WalkButton();
+                flyButton	= new FlyButton();
 
-                spaceWidth		= 600;
+                spaceWidth	= 600;
                 spaceHeight	= 600;
 
                 renglones = 1;
                 columnas = 2;
-                gridPanel 		= new GridPanel(renglones, columnas);
+                gridPanel = new GridPanel(renglones, columnas);
 
         }
 
